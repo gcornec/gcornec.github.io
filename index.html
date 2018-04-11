@@ -34,7 +34,7 @@
           </div>
         </div>
 
-        <div class="infogram-embed" data-id="ecc754f2-3708-44b9-9e98-b7ff279f68d0" data-type="interactive" data-title="Flow Dark"></div><script>!function(e,t,n,s){var i="InfogramEmbeds",o=e.getElementsByTagName(t)[0],d=/^http:/.test(e.location)?"http:":"https:";if(/^\/{2}/.test(s)&&(s=d+s),window[i]&&window[i].initialized)window[i].process&&window[i].process();else if(!e.getElementById(n)){var a=e.createElement(t);a.async=1,a.id=n,a.src=s,o.parentNode.insertBefore(a,o)}}(document,"script","infogram-async","https://e.infogram.com/js/dist/embed-loader-min.js");</script><div style="padding:8px 0;font-family:Arial!important;font-size:13px!important;line-height:15px!important;text-align:center;border-top:1px solid #dadada;margin:0 30px"><a href="https://infogram.com/ecc754f2-3708-44b9-9e98-b7ff279f68d0" style="color:#989898!important;text-decoration:none!important;" target="_blank">Flow Dark</a><br><a href="https://infogram.com" style="color:#989898!important;text-decoration:none!important;" target="_blank" rel="nofollow">Infogram</a></div> 
+        <div class="infogram-embed" data-id="ecc754f2-3708-44b9-9e98-b7ff279f68d0" data-type="interactive" data-title="Flow Dark"></div><script>!function(e,t,n,s){var i="InfogramEmbeds",o=e.getElementsByTagName(t)[0],d=/^http:/.test(e.location)?"http:":"https:";if(/^\/{2}/.test(s)&&(s=d+s),window[i]&&window[i].initialized)window[i].process&&window[i].process();else if(!e.getElementById(n)){var a=e.createElement(t);a.async=1,a.id=n,a.src=s,o.parentNode.insertBefore(a,o)}}(document,"script","infogram-async","https://e.infogram.com/js/dist/embed-loader-min.js");</script><div style="padding:8px 0;font-family:Arial!important;font-size:13px!important;line-height:15px!important;text-align:center;border-top:1px solid #dadada;margin:0 30px"><a href="https://infogram.com/ecc754f2-3708-44b9-9e98-b7ff279f68d0" style="color:#989898!important;text-decoration:none!important;" target="_blank">Flow Dark</a><br><a href="https://infogram.com" style="color:#989898!important;text-decoration:none!important;" target="_blank" rel="nofollow">Infogram</a></div>
 
 
 
@@ -864,7 +864,7 @@
       // After the transition finishes, you can mouseover to change the year.
       function enableInteraction() {
         var yearScale = d3.scale.linear()
-            .domain([1800, 2009])
+            .domain([1950, 2100])
             .range([box.x + 10, box.x + box.width - 10])
             .clamp(true);
 
@@ -907,11 +907,11 @@
       function interpolateData(year) {
         return nations.map(function(d) {
           return {
-            name: d.name,
+            name: d.Location,
             region: d.region,
-            income: interpolateValues(d.income, year),
-            population: interpolateValues(d.population, year),
-            lifeExpectancy: interpolateValues(d.lifeExpectancy, year)
+            income: interpolateValues(d.OAD, year),
+            population: interpolateValues(d.PW, year),
+            lifeExpectancy: interpolateValues(d.FR, year)
           };
         });
       }
