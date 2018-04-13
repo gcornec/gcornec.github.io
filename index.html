@@ -811,7 +811,7 @@
         .text(1950);
 
     // Load the data.
-    d3.json("OAD_pays.json", function(nations) {
+    d3.json("OAD_pays-test.json", function(nations) {
 
       // A bisector since many nation's data is sparsely-defined.
       var bisect = d3.bisector(function(d) { return d[0]; });
