@@ -743,7 +743,7 @@
       </div>
 
     <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-    <script>
+    <script type="text/javascript">
 
     // Various accessors that specify the four dimensions of data to visualize.
     function x(d) { return d.OAD; }
@@ -820,7 +820,7 @@
       var dot = svg.append("g")
           .attr("class", "dots")
         .selectAll(".dot")
-          .data(interpolateData(1800))
+          .data(interpolateData(1950))
         .enter().append("circle")
           .attr("class", "dot")
           .style("fill", function(d) { return colorScale(color(d)); })
